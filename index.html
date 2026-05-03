@@ -1,53 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NOCTURNE — Electronic Music</title>
+  <title>OHAVS — Electronic Music</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Heebo:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Cookie Bar -->
   <div class="cookie-bar" id="cookieBar">
-    <span>This site uses cookies to enhance your experience.</span>
+    <span data-i18n="cookie.text">This site uses cookies to enhance your experience.</span>
     <button class="cookie-close" id="cookieClose" aria-label="Close">✕</button>
   </div>
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
-    <div class="nav-logo">NOCTURNE</div>
-    <ul class="nav-links">
-      <li><a href="#tracks" class="nav-link">Tracks</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
+    <div class="nav-logo">OHAVS</div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#tracks" class="nav-link" data-i18n="nav.tracks">Tracks</a></li>
+        <li><a href="#about"  class="nav-link" data-i18n="nav.about">About</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <button class="lang-btn" id="langBtn" aria-label="Switch language">עב</button>
+    </div>
   </nav>
 
   <!-- Hero -->
   <section class="hero" id="hero">
     <div class="hero-noise"></div>
     <div class="hero-content">
-      <div class="hero-tag reveal-up">Electronic Music Producer</div>
+      <div class="hero-tag reveal-up" data-i18n="hero.tag">Electronic Music Producer</div>
       <h1 class="hero-headline">
-        <span class="hero-word" data-word="0">THE</span>
-        <span class="hero-word" data-word="1">SOUND</span>
-        <span class="hero-word" data-word="2">OF</span>
-        <span class="hero-word highlight-bar" data-word="3">DARK</span>
+        <span class="hero-word" data-word="0" data-i18n="hero.word0">THE</span>
+        <span class="hero-word" data-word="1" data-i18n="hero.word1">SOUND</span>
+        <span class="hero-word" data-word="2" data-i18n="hero.word2">OF</span>
+        <span class="hero-word highlight-bar" data-word="3" data-i18n="hero.word3">DARK</span>
       </h1>
       <div class="hero-sub reveal-up" data-delay="0.6">
-        <span>MACHINES</span>
+        <span data-i18n="hero.sub0">MACHINES</span>
         <span class="accent-line"></span>
-        <span>FREQUENCIES</span>
+        <span data-i18n="hero.sub1">FREQUENCIES</span>
         <span class="accent-line"></span>
-        <span>MOTION</span>
+        <span data-i18n="hero.sub2">MOTION</span>
       </div>
     </div>
     <div class="hero-scroll-hint">
-      <span>Scroll</span>
+      <span data-i18n="hero.scroll">Scroll</span>
       <div class="scroll-line"></div>
     </div>
     <div class="hero-divider">
@@ -58,16 +61,16 @@
 
   <!-- Marquee Strip -->
   <div class="marquee-strip">
-    <div class="marquee-track">
-      <span>NOCTURNE</span><span class="dot">·</span>
+    <div class="marquee-track" data-i18n-html="marquee">
+      <span>OHAVS</span><span class="dot">·</span>
       <span>DARK TECHNO</span><span class="dot">·</span>
       <span>ACID INDUSTRIAL</span><span class="dot">·</span>
       <span>Berlin</span><span class="dot">·</span>
-      <span>NOCTURNE</span><span class="dot">·</span>
+      <span>OHAVS</span><span class="dot">·</span>
       <span>DARK TECHNO</span><span class="dot">·</span>
       <span>ACID INDUSTRIAL</span><span class="dot">·</span>
       <span>BERLIN</span><span class="dot">·</span>
-      <span>NOCTURNE</span><span class="dot">·</span>
+      <span>OHAVS</span><span class="dot">·</span>
       <span>DARK TECHNO</span><span class="dot">·</span>
       <span>ACID INDUSTRIAL</span><span class="dot">·</span>
       <span>BERLIN</span><span class="dot">·</span>
@@ -77,8 +80,8 @@
   <!-- Tracks Section -->
   <section class="tracks" id="tracks">
     <div class="section-header">
-      <div class="section-label reveal-up">Selected Works</div>
-      <h2 class="section-title reveal-up" data-delay="0.1">TRACKS</h2>
+      <div class="section-label reveal-up" data-i18n="tracks.label">Selected Works</div>
+      <h2 class="section-title reveal-up" data-delay="0.1" data-i18n="tracks.title">TRACKS</h2>
       <div class="section-divider">
         <div class="divider-yellow"></div>
         <div class="divider-black"></div>
@@ -90,24 +93,20 @@
       <div class="track-card reveal-card" data-index="0">
         <div class="track-number">01</div>
         <div class="track-waveform">
-          <div class="waveform-bars" id="waveform-0">
-            <!-- generated by js -->
-          </div>
+          <div class="waveform-bars" id="waveform-0"></div>
         </div>
         <div class="track-info">
           <div class="track-meta">
             <span class="track-year">2024</span>
-            <span class="track-genre">Techno / 140 BPM</span>
+            <span class="track-genre" data-i18n="t0.genre">Techno / 140 BPM</span>
           </div>
-          <h3 class="track-title">VOID PROTOCOL</h3>
-          <p class="track-desc">Hard-edged techno built from compressed metal samples and sub-bass decay loops. Recorded live at Tresor, Berlin.</p>
+          <h3 class="track-title" data-i18n="t0.title">VOID PROTOCOL</h3>
+          <p class="track-desc" data-i18n="t0.desc">Hard-edged techno built from compressed metal samples and sub-bass decay loops. Recorded live at Tresor, Berlin.</p>
         </div>
         <div class="track-controls">
-          <button class="play-btn" data-track="0" aria-label="Play">
-            <span class="play-icon">▶</span>
-          </button>
+          <button class="play-btn" data-track="0" aria-label="Play"><span class="play-icon">▶</span></button>
           <div class="track-duration">6:42</div>
-          <a href="#" class="track-link">More ↗</a>
+          <a href="#" class="track-link" data-i18n="track.more">More ↗</a>
         </div>
       </div>
 
@@ -119,17 +118,15 @@
         <div class="track-info">
           <div class="track-meta">
             <span class="track-year">2024</span>
-            <span class="track-genre">Acid / 133 BPM</span>
+            <span class="track-genre" data-i18n="t1.genre">Acid / 133 BPM</span>
           </div>
-          <h3 class="track-title">CARBON RITE</h3>
-          <p class="track-desc">Acidic TB-303 lines over industrial percussion and distorted pads. A journey through chemical darkness.</p>
+          <h3 class="track-title" data-i18n="t1.title">CARBON RITE</h3>
+          <p class="track-desc" data-i18n="t1.desc">Acidic TB-303 lines over industrial percussion and distorted pads. A journey through chemical darkness.</p>
         </div>
         <div class="track-controls">
-          <button class="play-btn" data-track="1" aria-label="Play">
-            <span class="play-icon">▶</span>
-          </button>
+          <button class="play-btn" data-track="1" aria-label="Play"><span class="play-icon">▶</span></button>
           <div class="track-duration">7:18</div>
-          <a href="#" class="track-link">More ↗</a>
+          <a href="#" class="track-link" data-i18n="track.more">More ↗</a>
         </div>
       </div>
 
@@ -141,17 +138,15 @@
         <div class="track-info">
           <div class="track-meta">
             <span class="track-year">2023</span>
-            <span class="track-genre">Industrial / 128 BPM</span>
+            <span class="track-genre" data-i18n="t2.genre">Industrial / 128 BPM</span>
           </div>
-          <h3 class="track-title">SIGNAL DECAY</h3>
-          <p class="track-desc">Featured release. Slow-building atmospheric tension colliding with rhythmic machinery. Over 80k streams.</p>
+          <h3 class="track-title" data-i18n="t2.title">SIGNAL DECAY</h3>
+          <p class="track-desc" data-i18n="t2.desc">Featured release. Slow-building atmospheric tension colliding with rhythmic machinery. Over 80k streams.</p>
         </div>
         <div class="track-controls">
-          <button class="play-btn" data-track="2" aria-label="Play">
-            <span class="play-icon">▶</span>
-          </button>
+          <button class="play-btn" data-track="2" aria-label="Play"><span class="play-icon">▶</span></button>
           <div class="track-duration">9:05</div>
-          <a href="#" class="track-link">More ↗</a>
+          <a href="#" class="track-link" data-i18n="track.more">More ↗</a>
         </div>
       </div>
 
@@ -163,17 +158,15 @@
         <div class="track-info">
           <div class="track-meta">
             <span class="track-year">2023</span>
-            <span class="track-genre">EBM / 125 BPM</span>
+            <span class="track-genre" data-i18n="t3.genre">EBM / 125 BPM</span>
           </div>
-          <h3 class="track-title">IRON SLEEP</h3>
-          <p class="track-desc">Classic EBM structures with contemporary sound design. Analog sequencer driven, fully hardware recorded.</p>
+          <h3 class="track-title" data-i18n="t3.title">IRON SLEEP</h3>
+          <p class="track-desc" data-i18n="t3.desc">Classic EBM structures with contemporary sound design. Analog sequencer driven, fully hardware recorded.</p>
         </div>
         <div class="track-controls">
-          <button class="play-btn" data-track="3" aria-label="Play">
-            <span class="play-icon">▶</span>
-          </button>
+          <button class="play-btn" data-track="3" aria-label="Play"><span class="play-icon">▶</span></button>
           <div class="track-duration">5:54</div>
-          <a href="#" class="track-link">More ↗</a>
+          <a href="#" class="track-link" data-i18n="track.more">More ↗</a>
         </div>
       </div>
 
@@ -185,17 +178,15 @@
         <div class="track-info">
           <div class="track-meta">
             <span class="track-year">2022</span>
-            <span class="track-genre">Dark Ambient / 90 BPM</span>
+            <span class="track-genre" data-i18n="t4.genre">Dark Ambient / 90 BPM</span>
           </div>
-          <h3 class="track-title">NULL SPACE</h3>
-          <p class="track-desc">Ambient exploration of negative space and long reverb tails. Designed for headphone listening in the dark.</p>
+          <h3 class="track-title" data-i18n="t4.title">NULL SPACE</h3>
+          <p class="track-desc" data-i18n="t4.desc">Ambient exploration of negative space and long reverb tails. Designed for headphone listening in the dark.</p>
         </div>
         <div class="track-controls">
-          <button class="play-btn" data-track="4" aria-label="Play">
-            <span class="play-icon">▶</span>
-          </button>
+          <button class="play-btn" data-track="4" aria-label="Play"><span class="play-icon">▶</span></button>
           <div class="track-duration">11:20</div>
-          <a href="#" class="track-link">More ↗</a>
+          <a href="#" class="track-link" data-i18n="track.more">More ↗</a>
         </div>
       </div>
 
@@ -207,17 +198,15 @@
         <div class="track-info">
           <div class="track-meta">
             <span class="track-year">2022</span>
-            <span class="track-genre">Techno / 138 BPM</span>
+            <span class="track-genre" data-i18n="t5.genre">Techno / 138 BPM</span>
           </div>
-          <h3 class="track-title">FERRIC BURN</h3>
-          <p class="track-desc">Tape saturation and analog warmth driving a relentless techno framework. Peak hour material.</p>
+          <h3 class="track-title" data-i18n="t5.title">FERRIC BURN</h3>
+          <p class="track-desc" data-i18n="t5.desc">Tape saturation and analog warmth driving a relentless techno framework. Peak hour material.</p>
         </div>
         <div class="track-controls">
-          <button class="play-btn" data-track="5" aria-label="Play">
-            <span class="play-icon">▶</span>
-          </button>
+          <button class="play-btn" data-track="5" aria-label="Play"><span class="play-icon">▶</span></button>
           <div class="track-duration">8:33</div>
-          <a href="#" class="track-link">More ↗</a>
+          <a href="#" class="track-link" data-i18n="track.more">More ↗</a>
         </div>
       </div>
 
@@ -227,8 +216,8 @@
   <!-- Big Statement -->
   <section class="statement">
     <div class="statement-inner">
-      <div class="statement-line reveal-statement" data-delay="0">SOUND IS</div>
-      <div class="statement-line reveal-statement highlight-bar-full" data-delay="0.15">ARCHITECTURE</div>
+      <div class="statement-line reveal-statement" data-delay="0" data-i18n="statement.1">SOUND IS</div>
+      <div class="statement-line reveal-statement highlight-bar-full" data-delay="0.15" data-i18n="statement.2">ARCHITECTURE</div>
     </div>
     <div class="section-divider">
       <div class="divider-yellow"></div>
@@ -240,23 +229,23 @@
   <section class="about" id="about">
     <div class="about-grid">
       <div class="about-label-col">
-        <div class="about-label reveal-up">About</div>
-        <div class="about-year-badge reveal-up" data-delay="0.1">EST.<br/>2017</div>
+        <div class="about-label reveal-up" data-i18n="about.label">About</div>
+        <div class="about-year-badge reveal-up" data-delay="0.1" data-i18n-html="about.badge">EST.<br>2017</div>
       </div>
 
       <div class="about-main">
         <h2 class="about-title reveal-up" data-delay="0.05">
-          NOCTURNE<br/>
-          <span class="about-subtitle">is a solo project</span>
+          OHAVS<br/>
+          <span class="about-subtitle" data-i18n="about.subtitle">is a solo project</span>
         </h2>
         <div class="about-body">
-          <p class="about-para reveal-up" data-delay="0.15">
-            Based between Berlin and the internet, NOCTURNE is the alias of a producer who builds music from industrial scrap: field recordings from factory floors, detuned machinery, magnetic tape artifacts, and raw synthesis.
+          <p class="about-para reveal-up" data-delay="0.15" data-i18n="about.p1">
+            Based between Berlin and the internet, OHAVS is the alias of a producer who builds music from industrial scrap: field recordings from factory floors, detuned machinery, magnetic tape artifacts, and raw synthesis.
           </p>
-          <p class="about-para reveal-up" data-delay="0.2">
+          <p class="about-para reveal-up" data-delay="0.2" data-i18n="about.p2">
             The work sits at the intersection of techno, EBM, and industrial. Hard drums, hypnotic repetition, and an obsessive attention to texture define the sound — music designed for movement in dark rooms, or solitary late-night listening.
           </p>
-          <p class="about-para reveal-up" data-delay="0.25">
+          <p class="about-para reveal-up" data-delay="0.25" data-i18n="about.p3">
             All tracks are produced with a hardware-first approach. No VSTs. No shortcuts.
           </p>
         </div>
@@ -264,25 +253,25 @@
         <div class="about-stats">
           <div class="stat reveal-up" data-delay="0.3">
             <div class="stat-number">40+</div>
-            <div class="stat-label">Releases</div>
+            <div class="stat-label" data-i18n="stat0.label">Releases</div>
           </div>
           <div class="stat reveal-up" data-delay="0.35">
             <div class="stat-number">12</div>
-            <div class="stat-label">Labels</div>
+            <div class="stat-label" data-i18n="stat1.label">Labels</div>
           </div>
           <div class="stat reveal-up" data-delay="0.4">
             <div class="stat-number">200k</div>
-            <div class="stat-label">Streams</div>
+            <div class="stat-label" data-i18n="stat2.label">Streams</div>
           </div>
           <div class="stat reveal-up" data-delay="0.45">
             <div class="stat-number">7</div>
-            <div class="stat-label">Years</div>
+            <div class="stat-label" data-i18n="stat3.label">Years</div>
           </div>
         </div>
       </div>
 
       <div class="about-gear reveal-up" data-delay="0.2">
-        <div class="gear-header">Hardware</div>
+        <div class="gear-header" data-i18n="gear.header">Hardware</div>
         <ul class="gear-list">
           <li>Roland TR-909</li>
           <li>Korg MS-20</li>
@@ -300,44 +289,44 @@
     </div>
   </section>
 
-  <!-- Releases Ticker -->
+  <!-- Releases -->
   <section class="releases">
     <div class="releases-header">
-      <div class="releases-label reveal-up">Latest Releases</div>
+      <div class="releases-label reveal-up" data-i18n="releases.label">Latest Releases</div>
     </div>
     <div class="releases-list">
       <div class="release-row reveal-row" data-delay="0">
         <span class="release-num">001</span>
-        <span class="release-title">VOID PROTOCOL EP</span>
-        <span class="release-label">Self-Released</span>
+        <span class="release-title" data-i18n="r0.title">VOID PROTOCOL EP</span>
+        <span class="release-label-text" data-i18n="r0.label">Self-Released</span>
         <span class="release-date">Mar 2024</span>
         <a href="#" class="release-link">↗</a>
       </div>
       <div class="release-row reveal-row" data-delay="0.07">
         <span class="release-num">002</span>
-        <span class="release-title">CARBON RITE — Single</span>
-        <span class="release-label">Occult Records</span>
+        <span class="release-title" data-i18n="r1.title">CARBON RITE — Single</span>
+        <span class="release-label-text" data-i18n="r1.label">Occult Records</span>
         <span class="release-date">Jan 2024</span>
         <a href="#" class="release-link">↗</a>
       </div>
       <div class="release-row reveal-row" data-delay="0.14">
         <span class="release-num">003</span>
-        <span class="release-title">SIGNAL DECAY LP</span>
-        <span class="release-label">Ferro Editions</span>
+        <span class="release-title" data-i18n="r2.title">SIGNAL DECAY LP</span>
+        <span class="release-label-text" data-i18n="r2.label">Ferro Editions</span>
         <span class="release-date">Nov 2023</span>
         <a href="#" class="release-link">↗</a>
       </div>
       <div class="release-row reveal-row" data-delay="0.21">
         <span class="release-num">004</span>
-        <span class="release-title">IRON SLEEP — Single</span>
-        <span class="release-label">Praxis</span>
+        <span class="release-title" data-i18n="r3.title">IRON SLEEP — Single</span>
+        <span class="release-label-text" data-i18n="r3.label">Praxis</span>
         <span class="release-date">Jun 2023</span>
         <a href="#" class="release-link">↗</a>
       </div>
       <div class="release-row reveal-row" data-delay="0.28">
         <span class="release-num">005</span>
-        <span class="release-title">STASIS FIELD — Compilation</span>
-        <span class="release-label">Mechanic VA</span>
+        <span class="release-title" data-i18n="r4.title">STASIS FIELD — Compilation</span>
+        <span class="release-label-text" data-i18n="r4.label">Mechanic VA</span>
         <span class="release-date">Feb 2023</span>
         <a href="#" class="release-link">↗</a>
       </div>
@@ -348,20 +337,20 @@
   <section class="contact" id="contact">
     <div class="contact-inner">
       <div class="contact-left">
-        <div class="contact-label reveal-up">Get in Touch</div>
-        <h2 class="contact-title reveal-up" data-delay="0.05">LET'S<br/>MAKE<br/>NOISE.</h2>
+        <div class="contact-label reveal-up" data-i18n="contact.label">Get in Touch</div>
+        <h2 class="contact-title reveal-up" data-delay="0.05" data-i18n-html="contact.title">LET'S<br>MAKE<br>NOISE.</h2>
       </div>
       <div class="contact-right">
-        <p class="contact-body reveal-up" data-delay="0.15">
+        <p class="contact-body reveal-up" data-delay="0.15" data-i18n="contact.body">
           For bookings, collaborations, licensing, or anything else — reach out directly.
         </p>
         <div class="contact-links">
-          <a href="mailto:nocturne@example.com" class="contact-email reveal-up" data-delay="0.2">nocturne@example.com</a>
+          <a href="mailto:ohavs@example.com" class="contact-email reveal-up" data-delay="0.2">ohavs@example.com</a>
           <div class="contact-socials reveal-up" data-delay="0.25">
-            <a href="#" class="social-link">Soundcloud ↗</a>
-            <a href="#" class="social-link">Bandcamp ↗</a>
-            <a href="#" class="social-link">Instagram ↗</a>
-            <a href="#" class="social-link">Resident Advisor ↗</a>
+            <a href="#" class="social-link" data-i18n="social.sc">Soundcloud ↗</a>
+            <a href="#" class="social-link" data-i18n="social.bc">Bandcamp ↗</a>
+            <a href="#" class="social-link" data-i18n="social.ig">Instagram ↗</a>
+            <a href="#" class="social-link" data-i18n="social.ra">Resident Advisor ↗</a>
           </div>
         </div>
       </div>
@@ -375,11 +364,11 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-logo">NOCTURNE</div>
-      <div class="footer-copy">© 2024 NOCTURNE. All rights reserved.</div>
+      <div class="footer-logo">OHAVS</div>
+      <div class="footer-copy" data-i18n="footer.copy">© 2024 OHAVS. All rights reserved.</div>
       <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Press Kit</a>
+        <a href="#" data-i18n="footer.privacy">Privacy</a>
+        <a href="#" data-i18n="footer.presskit">Press Kit</a>
       </div>
     </div>
   </footer>
